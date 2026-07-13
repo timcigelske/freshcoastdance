@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fresh Coast Connect — brand matched to the studio website redesign:
+   crisp white surfaces, a deep navy-teal primary, a teal script wordmark,
+   Poppins headings, and Mulish body text. */
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f6f7f8;
+  --fg: #1e3a44; /* dark slate — headings & strong text */
+  --fg-muted: #6e8a94; /* eyebrow labels & secondary text */
+  --border: #e4e8ea;
+  --accent: #173540; /* deep navy-teal — primary buttons */
+  --accent-hover: #0f2730;
+  --brand: #2f6f7f; /* teal script wordmark */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f2129;
+    --bg-secondary: #17313b;
+    --fg: #eaf1f2;
+    --fg-muted: #90a8b0;
+    --border: rgba(255, 255, 255, 0.1);
+    --accent: #3b8494; /* brighter teal so buttons read on dark */
+    --accent-hover: #4c97a7;
+    --brand: #6bc0d0;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Headings take the geometric display face from the website redesign. */
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.font-script {
+  font-family: "Sacramento", cursive;
+}
