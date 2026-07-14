@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-950: #0a1628;
+    --navy-900: #0f1e38;
+    --navy-800: #1E3A5F;
+    --navy-700: #1e4a7a;
+    --navy-600: #1d5f9e;
+    --sapphire-600: #1d4ed8;
+    --sapphire-500: #2563eb;
+    --sapphire-400: #3b82f6;
+    --cream-50: #fdfaf6;
+    --cream-100: #f9f4ed;
+    --cream-200: #f0e8d8;
+    --accent-warm: #c8893a;
+    --accent-gold: #d4a644;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm;
+  }
+  .card-hover {
+    @apply card hover:shadow-md hover:border-slate-200 transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-navy-800 text-white font-semibold px-4 py-2 rounded-xl hover:bg-navy-700 transition-colors duration-150 text-sm;
+  }
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-700 font-semibold px-4 py-2 rounded-xl hover:bg-slate-200 transition-colors duration-150 text-sm;
+  }
+  .btn-outline {
+    @apply border border-slate-200 text-slate-600 font-medium px-4 py-2 rounded-xl hover:bg-slate-50 transition-colors duration-150 text-sm;
+  }
+  .badge-urgent {
+    @apply inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-700 border border-red-200;
+  }
+  .badge-important {
+    @apply inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200;
+  }
+  .badge-routine {
+    @apply inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600;
+  }
+  .badge-emergency {
+    @apply inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-red-600 text-white;
+  }
+  .nav-item {
+    @apply flex flex-col items-center gap-0.5 text-xs font-medium text-slate-500 hover:text-navy-800 transition-colors duration-150 px-3 py-2 rounded-xl;
+  }
+  .nav-item-active {
+    @apply flex flex-col items-center gap-0.5 text-xs font-semibold text-navy-800 px-3 py-2 rounded-xl bg-navy-50;
+  }
+  .sidebar-item {
+    @apply flex items-center gap-3 text-sm font-medium text-slate-500 hover:text-navy-800 hover:bg-slate-50 px-3 py-2.5 rounded-xl transition-all duration-150;
+  }
+  .sidebar-item-active {
+    @apply flex items-center gap-3 text-sm font-semibold text-navy-800 bg-navy-50 px-3 py-2.5 rounded-xl;
+  }
+}
+
+.navy-50 { background-color: #eff3fb; }
